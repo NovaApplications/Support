@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Support & Documentation</title>
+    <style>
+        :root {
+            --bg-color: #faf8f5;
+            --text-color: #222222;
+            --accent-color: #3b82f6;
+            --accent-hover: #2563eb;
+            --card-bg: #ffffff;
+            --border-color: #e5e7eb;
+            --muted-text: #6b7280;
+        }
+
+        /* Dark mode preference */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --text-color: #f3f4f6;
+                --accent-color: #60a5fa;
+                --accent-hover: #3b82f6;
+                --card-bg: #1e1e1e;
+                --border-color: #374151;
+                --muted-text: #9ca3af;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 24pt;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--muted-text);
+            font-size: 11pt;
+        }
+
+        .section-title {
+            font-size: 14pt;
+            font-weight: 600;
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 12pt;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 10.5pt;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .code-block {
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 9.5pt;
+            overflow-x: auto;
+            margin: 8px 0;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            font-size: 10.5pt;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 10pt;
+            margin-top: 10px;
+            transition: background-color 0.2s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 9pt;
+            color: var(--muted-text);
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Nova Adventures Support</h1>
+            <p>Documentation, Troubleshooting, and Help Center</p>
+        </header>
+
+        <!-- FAQ Section -->
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="card">
+            <h3>What is Nova Adventures?</h3>
+            <p>Nova Adventures (also known as Micro Adventures) is a privacy-focused mobile tracker built to help you discover, log, and complete bite-sized daily quests and micro-milestones without public social feeds or tracking overhead.</p>
+        </div>
+
+        <div class="card">
+            <h3>How do I verify my account?</h3>
+            <p>When signing up, an automated security email containing a transactional link is sent to your inbox. Simply tap that link from your mobile device to authorize and establish your data connection profile.</p>
+        </div>
+
+        <div class="card">
+            <h3>Where is my application data stored?</h3>
+            <p>Your records and completions are securely transmitted using encrypted tunnels over HTTPS to our private, self-hosted backend infrastructure. We do not use third-party data analytics networks or public trackers, ensuring complete isolation of your adventure history.</p>
+        </div>
+
+        <!-- Troubleshooting Section -->
+        <h2 class="section-title">Troubleshooting Connection & Login</h2>
+        
+        <div class="card">
+            <h3>Account Handshake Failures</h3>
+            <p>If the application returns a timeout warning during the initial secure loading configuration, try the following steps:</p>
+            <ul>
+                <li>Confirm that your mobile hardware is actively connected to cellular data or a functional local network.</li>
+                <li>Verify that standard outbound secure traffic (Port 443) isn't being forcefully dropped by your local proxy or active firewall.</li>
+                <li>Force clear your local application state or restart the sign-in sequence to renew the session certificates.</li>
+            </ul>
+        </div>
+
+        <!-- Data Privacy & Deletion -->
+        <h2 class="section-title">Data Control & Account Deletion</h2>
+        
+        <div class="card">
+            <h3>How do I request complete data erasure?</h3>
+            <p>You retain absolute, sovereign control over your information footprint. If you decide to wipe your state completely from our servers, you can initiate a permanent purging pipeline by contacting our developer line directly. All stored records, hashed identifiers, and active database profiles will be immediately dropped from the host instance.</p>
+        </div>
+
+        <!-- Contact Support -->
+        <h2 class="section-title">Contact Developer Support</h2>
+        <div class="card" style="text-align: center;">
+            <p>Need additional technical assistance or have a specific inquiry regarding code configurations or bugs?</p>
+            <a href="mailto:chantzbrimm@icloud.com" class="contact-btn">Email Developer Support</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Nova Applications. All rights reserved.</p>
+            <p style="margin-top: 5px;"><a href="/privacy/">Privacy Policy</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
